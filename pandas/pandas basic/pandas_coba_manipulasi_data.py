@@ -50,6 +50,14 @@ df1 = pd.DataFrame([4,5,2,7,1,8], columns=['nilai'])
 df1['ranking'] = df1['nilai'].rank()
 print(df1)
 
+"""# output"""
+
+print(kategori, '\n') # Data kategori
+print(produk, '\n') # Data produk
+print(gabung_table, '\n') # merge join
+print(gabung_table_outer,'\n') # merge outer yang data Nan juga muncul
+print(urutkan,'\n')
+
 """# Binning 'Pecah data jadi bin(kecil)'"""
 
 kelompok_usia = np.array([1,12,25,45,65])
@@ -72,13 +80,15 @@ data = {
 data_frame = pd.DataFrame(data).dropna()
 
 print(binning, '\n')
-print(data_frame, '\n')
+print(data_frame,'\n')
 pd.value_counts(binning)
+data_frame.head(5)
 
-"""# Tampilkan"""
 
-print(kategori, '\n') # Data kategori
-print(produk, '\n') # Data produk
-print(gabung_table, '\n') # merge join
-print(gabung_table_outer,'\n') # merge outer yang data Nan juga muncul
-print(urutkan,'\n')
+
+"""# Agregat sum,count,unique,mean,min max,median,std
+
+"""
+
+data_penerbangan = pd.read_csv('/content/penerbangan1.csv', names=['tanggal','flight','asal','tujuan','penumpang','durasi'])
+data_penerbangan.head(5)
